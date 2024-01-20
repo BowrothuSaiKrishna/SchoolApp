@@ -1,0 +1,51 @@
+body {
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: grey;
+    /* Change the background color of the body */
+}
+
+div {
+    width: 40%;
+    height: 250px;
+    text-align: center;
+    margin: 25px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: #ecf0f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: larger;
+    background-color: grey;
+    color: white;
+}
+
+h1 {
+    border-radius: 20px 20px;
+    text-decoration: underline;
+    color: grey;
+}
+
+button:hover {
+    background-color: black;
+    box-shadow: 0 0 15px grey;
+}
+
+h1:hover {
+    background-color: grey;
+    color: white;
+}
