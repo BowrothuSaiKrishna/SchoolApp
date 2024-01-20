@@ -1,0 +1,66 @@
+{% load static %}
+
+<html>
+
+<head>
+    <title>New vendor Page</title>
+</head>
+
+<style>
+    * {
+        font-family: monospace;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+    }
+
+    div {
+        border: 1px solid black;
+        width: 300px;
+        height: 150px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        background-color: aliceblue;
+        margin-top: 20px;
+        text-align: center;
+        font-size: large;
+
+    }
+
+    input {
+        border-radius: 5px;
+        margin-top: 10px;
+        font-weight: bolder;
+    }
+</style>
+
+<body>
+    <h1>Welcome to the New vendor Page</h1>
+    <h2>Please fill out the form below</h2>
+
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <!-- cross site request forger -->
+            <!-- It is mandatory to include in the html form ,  -->
+            <table>
+                {{ form.as_table }}
+            </table><br>
+            <input type="submit" value="Add vendor">
+        </form>
+    </div>
+</body>
+
+</html>

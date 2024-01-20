@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete!</title>
+</head>
+<style>
+    .container {
+        width: 500px;
+        height: 250px;
+        display: grid;
+        place-items: center;
+        justify-content: space-around;
+        gap: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: lightblue;
+    }
+
+    button {
+        width: 80px;
+        text-align: center;
+        height: 30px;
+        border-radius: 10px;
+        font-weight: bolder;
+        box-shadow: 0 0 15px gray;
+    }
+
+    button:hover {
+        background-color: black;
+        color: white;
+        transform: scale(1.2);
+    }
+</style>
+
+<body>
+    <form method="post">
+        {% csrf_token%}
+        <div class="container">
+            <h1>Are you sure you want to Delete?</h1>
+            <button type="submit" value="Confirm">Confirm</button>
+        </div>
+    </form>
+    <a href="../tr"><button type="submit" value="Cancel">Cancel</button></a>
+
+</body>
+
+</html>
